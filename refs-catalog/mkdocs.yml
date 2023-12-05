@@ -1,0 +1,6 @@
+site_name: Shared Publication Catalog
+nav:
+  - Home: index.md
+  - Publications: pubs.md
+theme:
+  name: material
