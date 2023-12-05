@@ -3,13 +3,13 @@ description: Fill in the form to add a new paper to the catalog
 
 body:
 - type: input
-  id: paper-title
+  id: pub_title
   attributes:
     label: Paper's Title
   validations:
     required: true
 - type: input
-  id: paper-year-of-pub
+  id: year_of_pub
   attributes:
     label: Paper's Publication Year
   validations:
@@ -23,7 +23,7 @@ body:
   validations:
     required: true
 - type: input
-  id: paper-link
+  id: pub_link
   attributes:
     label: Link to the Publication
     description: A link that redirects to the publication (when available and when under the publication's license permission)
