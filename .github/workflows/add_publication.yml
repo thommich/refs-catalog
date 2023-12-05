@@ -1,0 +1,38 @@
+name: Add new publication
+on:
+  issues:
+    types: opened
+concurrency: 'main'
+jobs:
+  add_publication:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - uses: stefanbuck/github-issue-praser@v3
+        id: issue-parser
+        with:
+          template-path: .github/ISSUE_TEMPLATE/add-new-paper.yml
+
+      - run: echo '${{ steps.issue-parser.outputs.jsonString }}' > publication.json
+
+      - run: cat publication.json
+
+      - run: node ./add-new-pub.js
+
+      - name: Commit changes
+        shell: bash
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com" && \
+          git config --global user.name "github-actions[bot]" && \
+          git add README.md && \
+          git commit -m 'Place order' && \
+          git push
+
+      - uses: peter-evans/close-issue@v1
+        with:
+          comment: New publication entry added to GitHub Pages
