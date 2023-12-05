@@ -7,4 +7,4 @@ const [pub_title, year_of_pub, tldr, pub_link] = Object.values(publication);
 
 const content = `| ${pub_title} | ${year_of_pub} | ${tldr} | ${pub_link} | [@${user}](https://github.com/${user}) |`;
 
-fs.appendFileSync('...', content);
+fs.appendFileSync('refs-catalog/pubs.md', content);
