@@ -1,0 +1,31 @@
+name: Add new paper
+description: Fill in the form to add a new paper to the catalog
+
+body:
+- type: input
+  id: paper-title
+  attributes:
+    label: Paper's Title
+  validations:
+    required: true
+- type: input
+  id: paper-year-of-pub
+  attributes:
+    label: Paper's Publication Year
+  validations:
+    required: true
+- type: textarea
+  id: tldr
+  attributes:
+    label: TL;DR
+    description: Give an overview of the main aspects of this paper in your own words
+    placeholder: Write down all the details that caught your attention!
+  validations:
+    required: true
+- type: input
+  id: paper-link
+  attributes:
+    label: Link to the Publication
+    description: A link that redirects to the publication (when available and when under the publication's license permission)
+  validations:
+    required: false
