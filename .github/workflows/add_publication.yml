@@ -24,7 +24,7 @@ jobs:
 
       - run: node ./add-new-pub.js
 
-      - name: Commit changes
+      - name: Updates and Deploys MKDocs
         shell: bash
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com" && \
