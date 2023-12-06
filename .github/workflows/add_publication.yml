@@ -23,16 +23,10 @@ jobs:
       - run: cat publication.json
 
       - run: node ./add-new-pub.js
-
-      - name: Updates and Deploys MKDocs
-        shell: bash
-        run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com" && \
-          git config --global user.name "github-actions[bot]" && \
-          git add README.md && \
-          git commit -m 'Place order' && \
-          git push
-
+      
+      - name: MkDocs GitHub Deploy
+        uses: vinomaster/mkdocs-ghpages-docker-action@v1
+        
       - uses: peter-evans/close-issue@v1
         with:
           comment: New publication entry added to GitHub Pages
