@@ -25,7 +25,11 @@ jobs:
       - run: node ./add-new-pub.js
       
       - name: MkDocs GitHub Deploy
-        uses: vinomaster/mkdocs-ghpages-docker-action@v1
+        uses: iSOLveIT/mkdocs-notes@v1.1.2
+        with:
+          documentation_path: ./refs-catalog/docs    
+          config_file_path: ./refs-catalog/mkdocs.yml
+          
         
       - uses: peter-evans/close-issue@v1
         with:
