@@ -45,7 +45,10 @@ jobs:
           git commit -m 'New Publication' && \
           git push
 
-      - run: cd refs-catalog
+      - name: CD
+        shell: bash
+        run: |
+          cd refs-catalog
 
       - name: Updates and Deploys MKDocs
         run: mkdocs gh-deploy
