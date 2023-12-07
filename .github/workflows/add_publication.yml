@@ -23,14 +23,19 @@ jobs:
       - run: cat publication.json
 
       - run: node ./add-new-pub.js
+
       
-      - name: MkDocs GitHub Deploy
-        uses: iSOLveIT/mkdocs-notes@v1.1.2
-        with:
-          documentation_path: ./refs-catalog/docs    
-          config_file_path: ./refs-catalog/mkdocs.yml
-          
-        
+      # - name: MkDocs GitHub Deploy
+      #   uses: iSOLveIT/mkdocs-notes@v1.1.2
+      #   with:
+      #     documentation_path: ./refs-catalog/docs    
+      #     config_file_path: ./refs-catalog/mkdocs.yml
+
+      - name: Deploy MkDocs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@1.26
+        env:
+          CONFIG_FILE: ./refs-catalog/mkdocs.yml
+
       - uses: peter-evans/close-issue@v1
         with:
           comment: New publication entry added to GitHub Pages
