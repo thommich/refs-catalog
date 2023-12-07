@@ -45,13 +45,8 @@ jobs:
           git commit -m 'New Publication' && \
           git push
 
-      - name: CD
-        shell: bash
-        run: |
-          cd refs-catalog
-
       - name: Updates and Deploys MKDocs
-        run: mkdocs gh-deploy
+        run: mkdocs gh-deploy -f ./refs-catalog/mkdocs.yml
       # - name: MkDocs GitHub Deploy
       #   uses: iSOLveIT/mkdocs-notes@v1.1.2
       #   with:
