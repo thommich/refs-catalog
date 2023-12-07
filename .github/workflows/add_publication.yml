@@ -15,6 +15,12 @@ jobs:
         with:
           node-version: '16'
 
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' 
+
+      - run: python -c pip install mkdocs
+
       - uses: stefanbuck/github-issue-praser@v3
         id: issue-parser
         with:
@@ -30,7 +36,7 @@ jobs:
 
       - run: git status
 
-      - name: Updates and Deploys MKDocs
+      - name: commit and push
         shell: bash
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com" && \
@@ -38,6 +44,9 @@ jobs:
           git add * && \
           git commit -m 'New Publication' && \
           git push
+
+      - name: Updates and Deploys MKDocs
+        run: mkdocs gh-deploy
       # - name: MkDocs GitHub Deploy
       #   uses: iSOLveIT/mkdocs-notes@v1.1.2
       #   with:
