@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: gh-pages
+          ref: docs-branch
 
       - uses: actions/setup-node@v2
         with:
