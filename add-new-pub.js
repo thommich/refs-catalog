@@ -5,7 +5,7 @@ const publication = require('./publication.json');
 const user = eventPayload.sender.login;
 const [pub_title, year_of_pub, tldr, pub_link] = Object.values(publication);
 
-const content = '| ${pub_title} | ${year_of_pub} | ${tldr} | ${pub_link} | [@${user}](https://github.com/${user}) |';
+const content = `| ${pub_title} | ${year_of_pub} | ${tldr} | ${pub_link} | [@${user}](https://github.com/${user}) |`;
 console.log(content)
 
 fs.appendFileSync('refs-catalog/pubs.md', content);
