@@ -18,9 +18,8 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: '3.9'
-          cache: 'pip'
-
-      - run: python -c pip install mkdocs
+          
+      - run: pip install mkdocs
 
       - uses: stefanbuck/github-issue-praser@v3
         id: issue-parser
