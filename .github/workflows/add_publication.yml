@@ -7,7 +7,9 @@ jobs:
   add_publication:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
 
       - uses: actions/setup-node@v2
         with:
@@ -24,14 +26,17 @@ jobs:
 
       - run: node ./add-new-pub.js
 
-      - name: Commit changes
-        shell: bash
-        run: |
-          git config --global user.email "github-actions[bot]@users.noreply.github.com" && \
-          git config --global user.name "github-actions[bot]" && \
-          git add README.md && \
-          git commit -m 'Place order' && \
-          git push
+      
+      # - name: MkDocs GitHub Deploy
+      #   uses: iSOLveIT/mkdocs-notes@v1.1.2
+      #   with:
+      #     documentation_path: ./refs-catalog/docs    
+      #     config_file_path: ./refs-catalog/mkdocs.yml
+
+      - name: Deploy MkDocs
+        uses: mhausenblas/mkdocs-deploy-gh-pages@1.26
+        env:
+          CONFIG_FILE: ./refs-catalog/mkdocs.yml
 
       - uses: peter-evans/close-issue@v1
         with:
