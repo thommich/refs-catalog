@@ -10,6 +10,6 @@ console.log(pub_title)
 const content = `| ${pub_title} | ${year_of_pub} | ${tldr} | ${pub_link} | [@${user}](https://github.com/${user}) |`;
 console.log(content)
 
-const pubsFilePath = path.join(__dirname, '/refs-catalog/pubs.md');
+const pubsFilePath = path.join(__dirname, '/refs-catalog/docs/pubs.md');
 console.log(pubsFilePath)
 fs.appendFileSync(pubsFilePath, content);
