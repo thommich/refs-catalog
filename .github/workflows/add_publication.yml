@@ -45,6 +45,8 @@ jobs:
           git commit -m 'New Publication' && \
           git push
 
+      - run: cd refs-catalog
+
       - name: Updates and Deploys MKDocs
         run: mkdocs gh-deploy
       # - name: MkDocs GitHub Deploy
