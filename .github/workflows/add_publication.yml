@@ -26,17 +26,28 @@ jobs:
 
       - run: node ./add-new-pub.js
 
-      
+      - run: git status
+
+      - run: git status
+
+      - name: Updates and Deploys MKDocs
+        shell: bash
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com" && \
+          git config --global user.name "github-actions[bot]" && \
+          git add * && \
+          git commit -m 'New Publication' && \
+          git push
       # - name: MkDocs GitHub Deploy
       #   uses: iSOLveIT/mkdocs-notes@v1.1.2
       #   with:
       #     documentation_path: ./refs-catalog/docs    
       #     config_file_path: ./refs-catalog/mkdocs.yml
 
-      - name: Deploy MkDocs
-        uses: mhausenblas/mkdocs-deploy-gh-pages@1.26
-        env:
-          CONFIG_FILE: ./refs-catalog/mkdocs.yml
+      # - name: Deploy MkDocs
+      #   uses: mhausenblas/mkdocs-deploy-gh-pages@1.26
+      #   env:
+      #     CONFIG_FILE: ./refs-catalog/mkdocs.yml
 
       - uses: peter-evans/close-issue@v1
         with:
