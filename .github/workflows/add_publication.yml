@@ -20,6 +20,7 @@ jobs:
           python-version: '3.9'
           
       - run: pip install mkdocs
+      - run: pip install mkdocs-material
 
       - uses: stefanbuck/github-issue-praser@v3
         id: issue-parser
