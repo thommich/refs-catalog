@@ -2,7 +2,7 @@ import os
 import json
 
 ev_payload = os.environ['GITHUB_EVENT_PATH']
-publication = json.loads('./publication.json')
+publication = json.loads('publication.json')
 print(publication)
 
 user = ev_payload.sender.login
