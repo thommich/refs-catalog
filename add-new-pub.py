@@ -1,12 +1,10 @@
 import os
 import json
 
-ev_payload = os.environ['GITHUB_EVENT_PATH']
 publication = json.load(open('publication.json','r'))
-print(publication)
 print(ev_payload)
 
-user = ev_payload['sender']['login']
+user = os.environ['GITHUB_ACTOR']
 pub_title = publication['title']
 year_of_pub = publication['year_of_pub']
 tldr = publication['tldr']
