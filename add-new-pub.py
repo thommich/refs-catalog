@@ -11,7 +11,7 @@ year_of_pub = publication['year_of_pub']
 tldr = publication['tldr']
 pub_link = publication['pub_link']
 
-content = f"\n| {pub_title} | {year_of_pub} | {tldr} | {pub_link} | [@{user}](https://github.com/{user}) |"s
+content = f"\n| {pub_title} | {year_of_pub} | {tldr} | {pub_link} | [@{user}](https://github.com/{user}) |"
 pubs_file_path = os.path.join(os.getcwd(), '/refs-catalog/docs/pubs.md');
 
 with open(pubs_file_path, "a") as file_pub:
