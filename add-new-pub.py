@@ -2,9 +2,10 @@ import os
 import json
 
 publication = json.load(open('publication.json','r'))
-print(ev_payload)
 
 user = os.environ['GITHUB_ACTOR']
+print(user)
+
 pub_title = publication['pub_title']
 year_of_pub = publication['year_of_pub']
 tldr = publication['tldr']
