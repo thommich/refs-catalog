@@ -11,9 +11,9 @@ jobs:
         with:
           ref: gh-pages
 
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '16'
+      #- uses: actions/setup-node@v2
+      #  with:
+      #    node-version: '16'
 
       - uses: actions/setup-python@v4
         with:
@@ -31,7 +31,9 @@ jobs:
 
       - run: cat publication.json
 
-      - run: node ./add-new-pub.js
+      #- run: node ./add-new-pub.js
+
+      - run: python3 ./add-new-pub.py
 
       - run: git status
 
