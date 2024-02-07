@@ -7,8 +7,4 @@
 | Evaluating Credit Risk Models | 1999 | ascascsa | https://drive.google.com/file/d/1JBzSSaC6XrufQYhAZHvf1Wb49GMUmFaP/view?usp=drive_link | [@thommich](https://github.com/thommich) |
 | Evaluating Credit Risk Models | 1999 | lknlknlkn | https://drive.google.com/file/d/1JBzSSaC6XrufQYhAZHvf1Wb49GMUmFaP/view?usp=drive_link | [@thommich](https://github.com/thommich) |
 | Evaluating Credit Risk Models | 1999 | jhkjhkjhk | https://drive.google.com/file/d/1JBzSSaC6XrufQYhAZHvf1Wb49GMUmFaP/view?usp=drive_link | [@thommich](https://github.com/thommich) |
-
-| Evaluating Credit Risk Models | 1999 | sadadsasdsdsdadadadsadasdsadasdaddas
-kfmslkfmsklfmsdf
-sdflkmslfkmslfkmsldkmf
-çfkmsflskfmlskfmds | https://drive.google.com/file/d/1JBzSSaC6XrufQYhAZHvf1Wb49GMUmFaP/view?usp=drive_link | [@thommich](https://github.com/thommich) |
+| Evaluating Credit Risk Models | 1999 | kfmsklfmsd | https://drive.google.com/file/d/1JBzSSaC6XrufQYhAZHvf1Wb49GMUmFaP/view?usp=drive_link | [@thommich](https://github.com/thommich) |
