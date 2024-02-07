@@ -5,7 +5,7 @@ publication = json.load(open('publication.json','r'))
 print(ev_payload)
 
 user = os.environ['GITHUB_ACTOR']
-pub_title = publication['title']
+pub_title = publication['pub_title']
 year_of_pub = publication['year_of_pub']
 tldr = publication['tldr']
 pub_link = publication['pub_link']
